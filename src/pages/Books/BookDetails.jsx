@@ -1,5 +1,6 @@
 import React from "react";
 import { useLoaderData, useParams } from "react-router";
+import { addToStoredDB } from "../../utility/addToDB";
 
 const BookDetails = () => {
    const { id } = useParams();
@@ -19,6 +20,10 @@ const BookDetails = () => {
       yearOfPublishing,
       tags,
    } = singleBook;
+
+   const handleMarkAsRead = (id) => {
+      addToStoredDB(id);
+   };
 
    return (
       <div className="md:flex gap-12 mb-20">
@@ -71,7 +76,10 @@ const BookDetails = () => {
             </div>
 
             <div>
-               <a className="text-[#131313] btn bg-transparent hover:bg-[#f3f3f3e1] border-[#1313134d] rounded-[8px] mr-4 duration-300">
+               <a
+                  onClick={() => handleMarkAsRead(id)}
+                  className="text-[#131313] btn bg-transparent hover:bg-[#f3f3f3e1] border-[#1313134d] rounded-[8px] mr-4 duration-300"
+               >
                   Read
                </a>
                <a className="text-white btn bg-[#50B1C9] hover:bg-[#6da7b5] rounded-[8px] duration-300">
