@@ -12,5 +12,9 @@ body {
 }
 
 .nav-links {
-  @apply text-[#23BE0A] hover:bg-[#23BE0A0D] font-semibold border border-transparent hover:border-[#23BE0A] rounded-[8px] cursor-pointer px-[2px] duration-300;
+  @apply text-[#23BE0A] hover:bg-[#23BE0A0D] font-semibold border border-transparent hover:border-[#23BE0A] rounded-[8px] cursor-pointer px-3 py-[5px] duration-300;
+}
+
+a.active {
+  @apply border border-[#23BE0A] bg-[#23BE0A0D] 
 }

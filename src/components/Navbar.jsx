@@ -1,20 +1,24 @@
 import React from "react";
+import { Link, NavLink } from "react-router";
 
 const Navbar = () => {
-   
    const links = (
       <>
-         <li className="nav-links">
-            <a className="bg-transparent">Home</a>
-         </li>
+         <NavLink to={"/"} className="nav-links">
+            Home
+         </NavLink>
 
-         <li className="nav-links mx-2">
-            <a className="bg-transparent">Listed Books</a>
-         </li>
+         <NavLink to={"/about"} className="nav-links ml-4">
+            About
+         </NavLink>
 
-         <li className="nav-links">
-            <a className="bg-transparent">Pages to Read</a>
-         </li>
+         <NavLink to={"/listed-books"} className="nav-links mx-4">
+            Listed Books
+         </NavLink>
+
+         <NavLink to={"/pages"} className="nav-links">
+            Pages to Read
+         </NavLink>
       </>
    );
 
@@ -45,12 +49,14 @@ const Navbar = () => {
                </div>
                <ul
                   tabIndex={0}
-                  className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
+                  className="menu menu-sm dropdown-content rounded-box z-1 mt-3 w-52 p-2 shadow"
                >
                   {links}
                </ul>
             </div>
-            <a className="text-[28px] font-bold text-[#131313]">Book Vibe</a>
+            <a href="/" className="text-[28px] font-bold text-[#131313]">
+               Book Vibe
+            </a>
          </div>
          <div className="navbar-center hidden lg:flex">
             <ul className="menu menu-horizontal px-1">{links}</ul>
