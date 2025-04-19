@@ -20,9 +20,9 @@ const addToStoredDB = (id) => {
       storedBookData.push(id);
       const data = JSON.stringify(storedBookData);
       localStorage.setItem("readList", data);
-      toast.success('Book Added successfully');
-      console.log(storedBookData);
+      toast.success("Book Added successfully");
+      // console.log(storedBookData);
    }
 };
 
-export { addToStoredDB };
+export { getStoredBook, addToStoredDB };

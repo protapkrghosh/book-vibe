@@ -12,7 +12,7 @@ const Navbar = () => {
             About
          </NavLink>
 
-         <NavLink to={"/listed-books"} className="nav-links mx-4">
+         <NavLink to={"/read-list"} className="nav-links mx-4">
             Listed Books
          </NavLink>
 
