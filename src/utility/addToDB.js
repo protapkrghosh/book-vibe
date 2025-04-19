@@ -21,7 +21,6 @@ const addToStoredDB = (id) => {
       const data = JSON.stringify(storedBookData);
       localStorage.setItem("readList", data);
       toast.success("Book Added successfully");
-      // console.log(storedBookData);
    }
 };
 
