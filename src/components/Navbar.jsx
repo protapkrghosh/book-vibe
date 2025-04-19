@@ -1,19 +1,25 @@
 import React from "react";
 
 const Navbar = () => {
+   
    const links = (
       <>
-         <li>
-            <a>Item 1</a>
+         <li className="nav-links">
+            <a className="bg-transparent">Home</a>
          </li>
-         <li>
-            <a>Item 3</a>
+
+         <li className="nav-links mx-2">
+            <a className="bg-transparent">Listed Books</a>
+         </li>
+
+         <li className="nav-links">
+            <a className="bg-transparent">Pages to Read</a>
          </li>
       </>
    );
 
    return (
-      <div className="navbar bg-base-100 shadow-sm">
+      <div className="navbar bg-base-100">
          <div className="navbar-start">
             <div className="dropdown">
                <div
@@ -44,13 +50,18 @@ const Navbar = () => {
                   {links}
                </ul>
             </div>
-            <a className="btn btn-ghost text-xl">daisyUI</a>
+            <a className="text-[28px] font-bold text-[#131313]">Book Vibe</a>
          </div>
          <div className="navbar-center hidden lg:flex">
             <ul className="menu menu-horizontal px-1">{links}</ul>
          </div>
          <div className="navbar-end">
-            <a className="btn">Button</a>
+            <a className="text-white btn bg-[#23BE0A] hover:bg-[#22be0ac0] rounded-[8px] mr-4 duration-300">
+               Sign In
+            </a>
+            <a className="text-white btn bg-[#59C6D2] hover:bg-[#6db2bb] rounded-[8px] duration-300">
+               Sign Up
+            </a>
          </div>
       </div>
    );

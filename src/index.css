@@ -1,2 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
 @import "tailwindcss";
 @plugin "daisyui";
+
+body {
+   font-family: "Work Sans", sans-serif;
+}
+
+.playfairDisplay {
+   font-family: "Playfair Display", sans-serif;
+}
+
+.nav-links {
+  @apply text-[#23BE0A] hover:bg-[#23BE0A0D] font-semibold border border-transparent hover:border-[#23BE0A] rounded-[8px] cursor-pointer px-[2px] duration-300;
+}
