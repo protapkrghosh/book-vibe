@@ -5,6 +5,7 @@ import "react-tabs/style/react-tabs.css";
 import { getStoredBook } from "../../utility/addToDB";
 import ReadBookDetails from "./ReadBookDetails";
 import { IoIosArrowDown } from "react-icons/io";
+import { Helmet } from "react-helmet-async";
 
 const ReadList = () => {
    const [readList, setReadList] = useState([]);
@@ -42,6 +43,10 @@ const ReadList = () => {
 
    return (
       <div>
+         <Helmet>
+            <title>Boi Poka | ReadList</title>
+         </Helmet>
+
          {/* Sort Dropdown */}
          <div className="flex justify-center">
             <div className="dropdown">
